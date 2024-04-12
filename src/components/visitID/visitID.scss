@@ -1,0 +1,55 @@
+@import "../../assets/current_styles/global_variables.scss";
+
+.visit-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  top: 69%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+  @media (max-width: 780px) {
+    width: 50%;
+  }
+
+  .visit-message {
+    position: relative;
+    background-color: rgba(70, 70, 70, 0.9);
+    padding: calc(0.6vw + 0.3rem);
+    padding-bottom: 0;
+    border-radius: 8px;
+    text-align: center;
+    max-width: calc(20vw + 5rem);
+    aspect-ratio: 2/1;
+    color: #ffffff;
+    border: 1px solid #fff;
+    box-shadow: 1px 1px 30px black;
+    .visit-message__title {
+      margin-bottom: calc(.4vw + .2rem);
+      @include text_style_h5;
+      color: $color_yellow;
+      line-height: 1;
+    }
+    .visit-message__text {
+      @include text_style_h6;
+      margin-bottom: calc(.4vw + .2rem);
+    }
+    .visit-message__time {
+      @include text_style_h5;
+    }
+    .visit-message__hamburger-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  
+}
+.visit-overlay.hidden {
+  display: none; /* Скрываем элемент, если visited = false */
+}
+

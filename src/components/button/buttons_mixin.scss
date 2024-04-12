@@ -1,0 +1,13 @@
+@mixin button_styles {
+	width: calc(1.5vw + 1.5rem);
+	height: calc(1.5vw + 1.5rem);
+	padding: calc(.2vw + .2rem);
+	border-radius: 50%;
+	border: 1px solid rgb(136, 135, 135);
+	transition: 0.6s;
+	&:hover {
+	  background-color: #afafaf;
+	  box-shadow: inset 0px 1px 10px black;
+	}
+}
+

@@ -1,0 +1,42 @@
+@import "../../../../../assets/current_styles/fonts.scss";
+@import "../../../../../assets/current_styles/global_variables.scss";
+
+.blackout {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-bottom: calc(2vw + 1rem);
+  border-top: 0.2vh solid #000000;
+  font-family: $Piazzolla;
+  .blackout__header-bgr {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
+      url(../../../../../assets/Images/blackout/blackout-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    min-height: 30vh;
+    margin-bottom: calc(0.6vw + 0.3rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .blackout-title {
+      @include medium_font;
+      color: #fff;
+      -webkit-text-stroke: 0.5px #000;
+    }
+  }
+  .container {
+    .blackout__content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .blackout__content-line1 {
+        border-bottom: 1px solid transparent;
+        margin-bottom: calc(2vw + 1rem);
+        box-shadow: 0 5px 10px #fff;
+      }
+    }
+  }
+}

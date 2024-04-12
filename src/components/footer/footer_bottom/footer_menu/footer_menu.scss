@@ -1,0 +1,21 @@
+@import '../../../../assets/current_styles/global_variables.scss';
+
+.footer-menu{
+	.footer-menu__item{
+		color: $color_text-gray;
+		margin-bottom: calc(2vw + .5rem); 
+		transition: .6s;
+		font-size: calc(.4vw + 1rem);
+		font-family: $Asap;
+		font-weight: 100;
+		text-shadow: 1px 1px 2px black;
+
+		&.active {
+			color: $color_yellow;
+		  }
+		&:hover {
+			color: $color_yellow;
+		  }
+
+	}
+}

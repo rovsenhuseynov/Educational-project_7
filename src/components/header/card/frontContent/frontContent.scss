@@ -1,0 +1,48 @@
+@import "../../../../assets/current_styles/global_variables.scss";
+@import "../../../../assets/current_styles/fonts.scss"; // $Barcode:
+
+.front-content {
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../../assets/Images/webp/curtains_11.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+
+  .front-content__inner-container {
+    display: grid;
+    grid-template-columns: 4fr 5.8fr;
+    text-align: center;
+    height: 100%;
+
+    .front-content__text {
+      padding: 4%;
+      max-width: 100%;
+      height: 100%;
+
+      .front-content__text-title {
+        display: grid;
+        grid-template-rows: auto-fill;
+        height: 100%;
+
+        .text-title-2A {
+          @include text_style_h6;
+        }
+
+        .text-title-1 {
+          font-size: calc(2vw + 1rem);
+          font-family: $Staatliches;
+          align-self: end;
+        }
+
+        .text-title-2 {
+          align-self: end;
+          font-family: $Barcode;
+          font-size: calc(1.5vw + 0.7rem);
+        }
+      }
+    }
+  }
+}

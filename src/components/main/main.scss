@@ -1,0 +1,17 @@
+@import "../../assets/current_styles/fonts.scss";
+@import '../../assets/current_styles/global_variables.scss';
+
+.main {
+  user-select: none;
+  flex: 1;
+  background-color: $background_color;
+
+
+
+  color: $color_text-gray;
+  // text-transform: uppercase;
+  font-weight: 300;
+  font-family: $Piazzolla;
+
+
+}

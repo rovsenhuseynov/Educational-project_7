@@ -1,0 +1,46 @@
+@import '../../../assets/current_styles/fonts.scss';
+
+.bg-container {
+  position: relative;
+  width: 100% !important;
+  height: calc(40vh + 20rem);
+  margin: auto;
+ 
+}
+.bg-container h1 {
+  color: white;
+}
+
+.layer-1 {
+  position: relative;
+}
+
+.top-layer {
+  font-family: $Asap;
+  text-shadow: 1px 1px 3px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(50vw + 8em);
+  text-wrap: balance;
+
+  .top-layer__par {
+    text-align: center;
+    text-wrap: balance;
+    font-weight: 100;
+    text-shadow: 1px 1px 4px black;
+    font-size: calc(1.5vw + 0.7em);
+    white-space: normal;
+    color: white;
+  }
+  .top-layer__text-h1 {
+    color: white;
+    // margin: calc(2vw + 1em) 0;
+    text-align: center;
+    font-size: calc(3vw + 1em);
+    font-weight: 200;
+    text-shadow: 1px 1px 4px black;
+    margin: calc(3vw + 1.5rem) 0;
+  }
+}

@@ -1,0 +1,58 @@
+@import "../../assets/current_styles/global_variables.scss";
+@import "../../assets/current_styles/fonts.scss";
+
+@mixin logo_mixin {
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(0.5vw + 0.5rem);
+  .logo-img {
+    z-index: 5; /* Увеличьте z-index текста */
+    mix-blend-mode: screen;
+    position: relative;
+    width: calc(7vw + 2.4rem);
+    height: calc(7vw + 2.4rem);
+    margin-right: calc(1vw + 0.5rem);
+  }
+
+  .logo-text {
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .text-h3 {
+      font-family: $Asap;
+      font-weight: 500;
+      font-size: calc(1vw + 1rem);
+      margin-bottom: calc(1vw - 0.1rem);
+      position: relative;
+      z-index: 5;
+      mix-blend-mode: screen; /* Добавьте mix-blend-mode */
+      line-height: 0.9;
+      color: $color_yellow;
+      .text3span {
+        font-family: $Asap;
+        font-size: calc(0.6vw + 0.6rem);
+      }
+    }
+    .text-ve {
+    font-family:$Piazzolla;
+      font-weight: 100;
+      font-size: calc(1.2vw + 1.2rem);
+      position: relative;
+      z-index: 5; /* Увеличьте z-index текста */
+      mix-blend-mode: screen; /* Добавьте mix-blend-mode */
+      color: white;
+      margin-bottom: calc(1vw - 0.1rem);
+	  line-height: .9;
+	  
+    }
+  }
+
+  @media (max-width: 600px) {
+    .logo-text {
+      font-weight: 200;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import "../../../assets/current_styles/global_variables.scss";
+
+.video-section {
+  background-color: rgb(22, 22, 22);
+  width: 100%;
+  min-height: 50vh;
+  height: auto;
+  padding-bottom: calc(2vw + 1rem);
+
+  .container {
+    position: relative;
+
+    .video-section__modal-overlay-title {
+      @include text_style_h2;
+      text-align: center;
+      padding: calc(1vw + 1rem) 0;
+    }
+
+    .modal-overlay {
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .modal-overlay__content {
+        
+        border-radius: 4px;
+        max-width: 650px;
+        width: 100%;
+        box-shadow: 0 -10px 10px -5px rgba(0, 0, 0, 0.5),
+          -10px 0 10px -5px rgba(0, 0, 0, 0.5),
+          10px 0 10px -5px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .thumbnail-container {
+      position: relative;
+      width: 100%;
+      height: auto;
+      text-align: center;
+      .thumbnail-image {
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+        box-shadow: 0 -10px 10px -5px rgba(0, 0, 0, 0.5),
+          -10px 0 10px -1px rgba(0, 0, 0, 0.5),
+          10px 0 10px -1px rgba(0, 0, 0, 0.5);
+      }
+
+
+      
+      .video-section__modal-overlay-btn-play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(3vw + 1.5rem);
+        height: calc(3vw + 1.5rem);
+        transition: filter 0.4s ease;
+        
+        &:hover {
+          filter: drop-shadow(0 0 20px #fff) invert(100%);
+        }
+      }
+    }
+  }
+}

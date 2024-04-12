@@ -1,0 +1,46 @@
+@import "../../../../../assets/current_styles/fonts.scss";
+@import "../../../../../assets/current_styles/global_variables.scss";
+
+.sunshade {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-bottom: calc(2vw + 1rem);
+  border-top: calc(0.6vw + 0.3rem) solid #000;
+  font-family: $Piazzolla;
+  .sunshade__header-bgr {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
+      url(../../../../../assets/Images/sunshade_img/sunlight_0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    min-height: 35vh;
+    margin-bottom: calc(0.6vw + 0.3rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .sunshade-title {
+      @include medium_font;
+      color: $color_yellow;
+      -webkit-text-stroke: 1px #000;
+    }
+  }
+  .container {
+    .sunshade-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      // line ====================
+
+      .sunshade-content-line1 {
+        border-bottom: 1px solid gray;
+        margin-bottom: calc(2vw + 1rem);
+      }
+      
+      // block2   =======================
+    }
+  }
+}

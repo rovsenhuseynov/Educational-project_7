@@ -1,0 +1,158 @@
+@import "../../assets/current_styles/fonts.scss";
+@import "../../components/Logo/logo_mixin.scss";
+@import "../../assets/current_styles/global_variables.scss";
+
+.header {
+  user-select: none;
+  padding: 2vw 0 0 0;
+  background-attachment: fixed;
+  background-color: #f1f1f1; /* Фоновый цвет */
+  background-image: url(../../assets/Images/webp/curtains_for_hero.webp);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    pointer-events: none; /* Чтобы клики проходили сквозь псевдоэлементы */
+    top: 0;
+    left: 0;
+  }
+  &::before {
+    width: 100%;
+    height: 40vh; /* Высота вашей верхней градиентной тени */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    z-index: 1;
+  }
+  &::after {
+    width: 100vw; /* Ширина вашей левой градиентной тени */
+    height: 100vh;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1),
+      rgba(255, 255, 255, 0)
+    );
+
+    z-index: 1;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 4vw;
+    .logo {
+      @include logo_mixin;
+    }
+    .hamburger-react {
+      position: relative;
+      z-index: 5; /* Увеличьте z-index текста */
+      mix-blend-mode: screen;
+    }
+  }
+
+  .header-bottom {
+    margin-bottom: calc(2vw + 1rem);
+    .header-bottom__contacts {
+      .nav {
+        text-align: right;
+        background: transparent;
+        margin: 1vh 0;
+        margin-top: 0;
+        position: relative;
+        z-index: 5; /* Увеличьте z-index текста */
+        mix-blend-mode: screen; /* Добавьте mix-blend-mode */
+
+        .nav__list {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          .nav__list-item {
+            display: inline-block;
+            @include text_style_h6;
+            text-transform: uppercase;
+
+            a {
+              display: inline-block;
+              text-decoration: none;
+              transition: transform 0.3s ease 0s;
+              transform-origin: 50% 0px 0px;
+              transform-style: preserve-3d;
+              color: $color_yellow;
+              border-radius: 5px;
+              line-height: 1.1;
+              padding: 0.4rem 1.6rem;
+              text-shadow: 1px 1px 2px black;
+              &.active {
+                color: $color_text-gray;
+              }
+
+              &::before {
+                position: absolute;
+                top: 100%;
+                left: 0px;
+                width: 100%;
+                padding: 4px 0px;
+                text-align: center;
+                line-height: 30px;
+                background: none repeat scroll 0% 0% $color_blue;
+                color: #fff;
+                content: attr(data-hover);
+                transition: color 0.3s ease 0s;
+                transform: rotateX(-90deg);
+                transform-origin: 50% 0px 0px;
+                border-radius: 5px;
+              }
+              a,
+              &:hover:not(.active) {
+                //Правило hover будет применяться только к элементам <a>, которые не имеют класс .active.
+                background: $color_blue;
+                color: $color-yellow;
+                transform: rotateX(90deg) translateY(-22px);
+                border-radius: 5px;
+                transition: 0.2s ease;
+              }
+            }
+          }
+          @media (max-width: 770px) {
+            .nav__list-item {
+              display: block;
+              text-align: start;
+            }
+          }
+        }
+        @media (max-width: 850px) {
+          .nav__list {
+            display: block;
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+
+  .active {
+    position: relative;
+    opacity: 1; /* Конечное состояние видимости */
+    transform: translateX(0); /* Конечное состояние - положение */
+    transition: opacity 0.4s ease, transform 0.5s ease;
+    z-index: 5; /* Увеличьте z-index текста */
+    mix-blend-mode: screen; /* Добавьте mix-blend-mode */
+    transition: 1s;
+  }
+
+  .nav-hidden {
+    position: relative;
+    opacity: 0; /* Начальное состояние видимости */
+    transform: translateX(0); /* Начальное состояние - положение */
+    transition: opacity 0.4s ease, transform 0.5s ease;
+    transform: translateX(-100%); // =======================================
+    transition: 1s;
+  }
+}
