@@ -53,7 +53,7 @@ const BlindsGallery = () => {
       swiper.update();
       swiper.slideTo(selectedSlideIndex, 0, false);
     }
-  }, [isZoomed, selectedSlideIndex, windowSize]);
+  }, [isZoomed, selectedSlideIndex, windowSize, swiper]);
 
   const handleLeftButtonClick = () => {
     if (swiper) {
