@@ -30,6 +30,7 @@ function Tulle() {
       </div>
 
       <div className="container">
+        
         <div className="tulle-catalog__flex">
           {Object.keys(groupedTulleData).map((groupId) => {
             const group = groupedTulleData[groupId];
