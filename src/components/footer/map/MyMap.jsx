@@ -2,6 +2,7 @@ import React from "react";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import "./MyMap.scss"
 
 import mapMarkerIcon from "../../../assets/Images/svg/location-pin-2965.svg";
 
@@ -17,13 +18,7 @@ const MyMap = () => {
   });
 
   return (
-    <div
-      style={{
-        borderRadius: "20px",
-        overflow: "hidden",
-        width: "calc(27vw + 10rem)",
-        height: "calc(10vw + 32vh)",
-      }}
+    <div className="myMap-style"
     >
       <MapContainer
         center={defaultPosition}
